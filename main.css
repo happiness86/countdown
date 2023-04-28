@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+}
+:root {
+  /* scrollbars colors */
+  --play-ttc-c-thumb: #eee;
+  --play-ttc-c-track: white;
+}
+
+.dark {
+  color-scheme: dark;
+  background: #080808;
+  color: white;
+  /* scrollbars colors */
+  --play-ttc-c-thumb: #222;
+  --play-ttc-c-track: #111;
+}

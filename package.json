@@ -1,0 +1,24 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@iconify-json/solar": "^1.1.1",
+    "@types/node": "^18",
+    "@unocss/nuxt": "^0.51.8",
+    "nuxt": "^3.4.2"
+  },
+  "dependencies": {
+    "@element-plus/nuxt": "^1.0.4",
+    "@vueuse/core": "^10.1.0",
+    "dayjs": "^1.11.7",
+    "element-plus": "^2.3.4",
+    "solarlunar": "^2.0.7"
+  }
+}
