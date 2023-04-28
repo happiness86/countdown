@@ -11,4 +11,5 @@
 </template>
 <style>
 @import 'main.css';
+@import url(https://fonts.bunny.net/css?family=aldrich:400|zcool-kuaile:400);
 </style>

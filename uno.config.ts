@@ -11,7 +11,8 @@ import {
 export default defineConfig({
   theme: {
     fontFamily: {
-      sans: '\'Inter\', sans-serif',
+      sans: '\'Aldrich\', \'ZCOOL KuaiLe\',sans-serif',
+      
       mono: '\'Fira Code\', monospace'
     },
   },
