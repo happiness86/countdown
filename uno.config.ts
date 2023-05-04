@@ -12,7 +12,6 @@ export default defineConfig({
   theme: {
     fontFamily: {
       sans: '\'Aldrich\', \'ZCOOL KuaiLe\',sans-serif',
-      
       mono: '\'Fira Code\', monospace'
     },
   },

@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@element-plus/nuxt': ^1.0.4
   '@iconify-json/solar': ^1.1.1
+  '@iconify-json/twemoji': ^1.1.11
   '@types/node': ^18
   '@unocss/nuxt': ^0.51.8
   '@vueuse/core': ^10.1.0
@@ -13,6 +14,7 @@ specifiers:
 
 dependencies:
   '@element-plus/nuxt': registry.npmjs.org/@element-plus/nuxt/1.0.4_element-plus@2.3.4
+  '@iconify-json/twemoji': registry.npmjs.org/@iconify-json/twemoji/1.1.11
   '@vueuse/core': registry.npmjs.org/@vueuse/core/10.1.0
   dayjs: registry.npmjs.org/dayjs/1.11.7
   element-plus: registry.npmjs.org/element-plus/2.3.4
@@ -709,11 +711,18 @@ packages:
       '@iconify/types': registry.npmjs.org/@iconify/types/2.0.0
     dev: true
 
+  registry.npmjs.org/@iconify-json/twemoji/1.1.11:
+    resolution: {integrity: sha512-ZA2v2AGWPC0rxiZDLqsVD+DoYB3n5Ft5q0YYAsy9QyYvoNWSdh6Vxe5d3yUP4mSpNkE4YW96RAjiZu72uXb7kQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@iconify-json/twemoji/-/twemoji-1.1.11.tgz}
+    name: '@iconify-json/twemoji'
+    version: 1.1.11
+    dependencies:
+      '@iconify/types': registry.npmjs.org/@iconify/types/2.0.0
+    dev: false
+
   registry.npmjs.org/@iconify/types/2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@iconify/types/-/types-2.0.0.tgz}
     name: '@iconify/types'
     version: 2.0.0
-    dev: true
 
   registry.npmjs.org/@iconify/utils/2.1.5:
     resolution: {integrity: sha512-6MvDI+I6QMvXn5rK9KQGdpEE4mmLTcuQdLZEiX5N+uZB+vc4Yw9K1OtnOgkl8mp4d9X0UrILREyZgF1NUwUt+Q==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@iconify/utils/-/utils-2.1.5.tgz}
