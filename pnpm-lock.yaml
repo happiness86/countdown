@@ -7,6 +7,7 @@ specifiers:
   '@types/node': ^18
   '@unocss/nuxt': ^0.51.8
   '@vueuse/core': ^10.1.0
+  '@wcjiang/notify': ^2.1.0
   dayjs: ^1.11.7
   element-plus: ^2.3.4
   nuxt: ^3.4.2
@@ -16,6 +17,7 @@ dependencies:
   '@element-plus/nuxt': registry.npmjs.org/@element-plus/nuxt/1.0.4_element-plus@2.3.4
   '@iconify-json/twemoji': registry.npmjs.org/@iconify-json/twemoji/1.1.11
   '@vueuse/core': registry.npmjs.org/@vueuse/core/10.1.2
+  '@wcjiang/notify': registry.npmjs.org/@wcjiang/notify/2.1.0
   dayjs: registry.npmjs.org/dayjs/1.11.7
   element-plus: registry.npmjs.org/element-plus/2.3.4
   solarlunar: registry.npmjs.org/solarlunar/2.0.7
@@ -1844,6 +1846,12 @@ packages:
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
+    dev: false
+
+  registry.npmjs.org/@wcjiang/notify/2.1.0:
+    resolution: {integrity: sha512-x+vM4QihcVtHslN9mUi3GkMqMRV7w/EThZ+l9z9oMx5/2wIU/NHp5e5kBU5/qQkKVxN4+L0ARkKXCoPRzUdNzA==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@wcjiang/notify/-/notify-2.1.0.tgz}
+    name: '@wcjiang/notify'
+    version: 2.1.0
     dev: false
 
   registry.npmjs.org/abbrev/1.1.1:
