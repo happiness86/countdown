@@ -9,16 +9,14 @@ function checkTime() {
   const currentDate = dayjs()
   const day = currentDate.day()
   const cacheKey = `${cacheKeyPrefix}_${currentDate.format('YYYY-MM-DD')}`
-  if (day > 0 && day < 6) {
-    const hour = currentDate.hour()
-    if (hour >= 18 && hour < 19 && !localStorage.getItem(cacheKey)) {
-      const minutes = currentDate.minute()
-      notify.notify({
-        title: "倒计时",
-        body: `还有${60 - minutes - 1}分钟!`
-      })
-      localStorage.setItem(cacheKey, 'done')
-    }
+  const hour = currentDate.hour()
+  if (hour >= 18 && hour < 19 && !localStorage.getItem(cacheKey)) {
+    const minutes = currentDate.minute()
+    notify.notify({
+      title: "倒计时",
+      body: `还有${60 - minutes - 1}分钟!`
+    })
+    localStorage.setItem(cacheKey, 'done')
   }
 }
 
