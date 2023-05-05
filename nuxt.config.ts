@@ -5,4 +5,5 @@ export default defineNuxtConfig({
     injectionID: { prefix: 10000, current: 1 },
   },
   css: ["element-plus/theme-chalk/dark/css-vars.css"],
+  plugins: [{ src: '~/plugins/vercel.ts', mode: 'client' }]
 });
