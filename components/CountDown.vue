@@ -28,15 +28,16 @@ const countdownDiff = dayjs().valueOf() - dayjs(`${lastHoliday.value} 00:00:00`)
 const countdownTotal = dayjs(`${nextHoliday.value} 19:00:00`).subtract(1, 'day').valueOf() - dayjs(`${lastHoliday.value} 00:00:00`).valueOf()
 const countdownPercentage = ref(Math.ceil(countdownDiff / countdownTotal * 100))
 
+const workHours = 9 * 60 * 60 * 1000
 const knockOff = ref(dayjs(`${dayjs().format('YYYY-MM-DD')} 19:00:00`))
 const knockOffDiff = dayjs().valueOf() - dayjs(`${dayjs().format('YYYY-MM-DD')} 10:00:00`).valueOf()
-const knockOffPercentage = ref(Math.ceil(knockOffDiff / (9 * 60 * 60 * 1000) * 100))
+const knockOffPercentage = ref(Math.ceil(knockOffDiff / workHours * 100))
 
 let timer: number
 onMounted(() => {
   timer = window.setInterval(() => {
     countdownPercentage.value = Math.ceil(countdownDiff / countdownTotal * 100)
-    knockOffPercentage.value = Math.ceil(knockOffDiff / (9 * 60 * 60 * 1000) * 100)
+    knockOffPercentage.value = Math.ceil(knockOffDiff / workHours * 100)
   }, 1000 * 10)
 })
 
