@@ -47,7 +47,6 @@ onMounted(() => {
   knockOffInterval = window.setInterval(() => {
     const newDiff = getKnockOffDiff()
     knockOffPercentage.value = Math.ceil(newDiff / workHours * 100)
-    console.log(newDiff, workHours)
     if (newDiff >= workHours) {
       window.clearInterval(knockOffInterval)
     }
