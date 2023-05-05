@@ -8,7 +8,7 @@ const openSetting = () => {
 }
 </script>
 <template>
-  <div class="flex items-center justify-between w-80vw border-b border-b-solid p-t-16px p-b-16px p-l-10vw p-r-10vw fixed top-0 left-0 bg-white" style="border-color: rgba(60, 60, 67, .12)">
+  <div class="flex items-center justify-between w-80vw border-b border-b-solid p-t-16px p-b-16px p-l-10vw p-r-10vw fixed top-0 left-0" style="border-color: rgba(60, 60, 67, .12)">
     <div class="flex items-center">
       <img width="40" height="40" src="~/assets/icons/countdown.svg" />
       <span class="font-500 text-2xl m-l-10px">Count Down</span>
