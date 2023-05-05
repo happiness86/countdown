@@ -38,6 +38,7 @@ onMounted(() => {
   timer = window.setInterval(() => {
     countdownPercentage.value = Math.ceil(countdownDiff / countdownTotal * 100)
     knockOffPercentage.value = Math.ceil(knockOffDiff / workHours * 100)
+    console.log(knockOffPercentage)
   }, 1000 * 10)
 })
 
