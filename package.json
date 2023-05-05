@@ -11,6 +11,7 @@
   },
   "devDependencies": {
     "@iconify-json/solar": "^1.1.1",
+    "@nuxt/devtools": "^0.4.5",
     "@types/node": "^18",
     "@unocss/nuxt": "^0.51.8",
     "nuxt": "^3.4.2"
