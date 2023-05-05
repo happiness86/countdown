@@ -9,6 +9,7 @@ html, body {
   /* scrollbars colors */
   --play-ttc-c-thumb: #eee;
   --play-ttc-c-track: white;
+  --border-color: rgba(60, 60, 67, .12)
 }
 
 .dark {
@@ -18,4 +19,5 @@ html, body {
   /* scrollbars colors */
   --play-ttc-c-thumb: #222;
   --play-ttc-c-track: #111;
+  --border-color: rgba(60, 60, 67, 1)
 }
