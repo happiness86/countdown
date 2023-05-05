@@ -6,7 +6,6 @@ specifiers:
   '@iconify-json/twemoji': ^1.1.11
   '@types/node': ^18
   '@unocss/nuxt': ^0.51.8
-  '@vercel/analytics': ^1.0.1
   '@vueuse/core': ^10.1.0
   dayjs: ^1.11.7
   element-plus: ^2.3.4
@@ -16,7 +15,6 @@ specifiers:
 dependencies:
   '@element-plus/nuxt': registry.npmjs.org/@element-plus/nuxt/1.0.4_element-plus@2.3.4
   '@iconify-json/twemoji': registry.npmjs.org/@iconify-json/twemoji/1.1.11
-  '@vercel/analytics': registry.npmjs.org/@vercel/analytics/1.0.1
   '@vueuse/core': registry.npmjs.org/@vueuse/core/10.1.0
   dayjs: registry.npmjs.org/dayjs/1.11.7
   element-plus: registry.npmjs.org/element-plus/2.3.4
@@ -1585,12 +1583,6 @@ packages:
     transitivePeerDependencies:
       - rollup
     dev: true
-
-  registry.npmjs.org/@vercel/analytics/1.0.1:
-    resolution: {integrity: sha512-Ux0c9qUfkcPqng3vrR0GTrlQdqNJ2JREn/2ydrVuKwM3RtMfF2mWX31Ijqo1opSjNAq6rK76PwtANw6kl6TAow==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@vercel/analytics/-/analytics-1.0.1.tgz}
-    name: '@vercel/analytics'
-    version: 1.0.1
-    dev: false
 
   registry.npmjs.org/@vercel/nft/0.22.6:
     resolution: {integrity: sha512-gTsFnnT4mGxodr4AUlW3/urY+8JKKB452LwF3m477RFUJTAaDmcz2JqFuInzvdybYIeyIv1sSONEJxsxnbQ5JQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@vercel/nft/-/nft-0.22.6.tgz}
