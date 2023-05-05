@@ -46,7 +46,7 @@ onUnmounted(() => {
 </script>
 <template>
   <div class="m-t-48px text-20px font-500 shadow-xl m-l-16px p-32px w-80vw">
-    <div class="m-b-16px">距离<span class="text-rose">下班</span>放假还有：</div>
+    <div class="m-b-16px">距离<span class="text-rose">下班</span>还有：</div>
     <div class="flex items-center m-b-16px">
       <div class="i-solar-clock-circle-bold-duotone text-rose text-22px m-r-8px"></div>
       <el-countdown format="HH [时] mm [分] ss [秒]" :value="knockOff" class=" text-rose"></el-countdown>
