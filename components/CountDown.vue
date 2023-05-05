@@ -48,21 +48,23 @@ onUnmounted(() => {
 </script>
 <template>
   <div>
-    <div class="m-t-48px text-20px font-500 shadow-xl m-l-16px p-32px w-80vw">
-      <div class="m-b-16px">距离<span class="text-rose">下班</span>还有：</div>
-      <div class="flex items-center m-b-16px">
-        <div class="i-solar-clock-circle-bold-duotone text-rose text-22px m-r-8px"></div>
-        <el-countdown format="HH [时] mm [分] ss [秒]" :value="knockOff" class=" text-rose"></el-countdown>
+    <client-only>
+      <div class="m-t-48px text-20px font-500 shadow-xl m-l-16px p-32px w-80vw">
+        <div class="m-b-16px">距离<span class="text-rose">下班</span>还有：</div>
+        <div class="flex items-center m-b-16px">
+          <div class="i-solar-clock-circle-bold-duotone text-rose text-22px m-r-8px"></div>
+          <el-countdown format="HH [时] mm [分] ss [秒]" :value="knockOff" class=" text-rose"></el-countdown>
+        </div>
+        <el-progress :percentage="knockOffPercentage" :stroke-width="15" striped striped-flow class="w-50vw" />
       </div>
-      <el-progress :percentage="knockOffPercentage" :stroke-width="15" striped striped-flow class="w-50vw" />
-    </div>
-    <div class="m-t-48px text-20px font-500 shadow-xl m-l-16px p-32px w-80vw">
-      <div class="m-b-16px">距离<span class="text-rose">{{ nextHoliday.name }}</span>放假还有：</div>
-      <div class="flex items-center m-b-16px">
-        <div class="i-solar-clock-circle-bold-duotone text-rose text-22px m-r-8px"></div>
-        <el-countdown format="DD [天] HH [时] mm [分] ss [秒]" :value="countdown" class=" text-rose"></el-countdown>
+      <div class="m-t-48px text-20px font-500 shadow-xl m-l-16px p-32px w-80vw">
+        <div class="m-b-16px">距离<span class="text-rose">{{ nextHoliday.name }}</span>放假还有：</div>
+        <div class="flex items-center m-b-16px">
+          <div class="i-solar-clock-circle-bold-duotone text-rose text-22px m-r-8px"></div>
+          <el-countdown format="DD [天] HH [时] mm [分] ss [秒]" :value="countdown" class=" text-rose"></el-countdown>
+        </div>
+        <el-progress :percentage="countdownPercentage" :stroke-width="15" striped striped-flow class="w-50vw" />
       </div>
-      <el-progress :percentage="countdownPercentage" :stroke-width="15" striped striped-flow class="w-50vw" />
-    </div>
+    </client-only>
   </div>
 </template>
