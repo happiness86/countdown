@@ -34,12 +34,12 @@ const lastHoliday = pastHoliday[pastHoliday.length - 1]
 const countdown = ref(nextHoliday ? dayjs(`${nextHoliday.value} 19:00:00`).subtract(1, 'day') : dayjs())
 const countdownDiff = getCountDownDiff()
 const countdownTotal = dayjs(`${nextHoliday.value} 19:00:00`).subtract(1, 'day').valueOf() - dayjs(`${lastHoliday.value} 00:00:00`).valueOf()
-const countdownPercentage = ref(Math.ceil(countdownDiff / countdownTotal * 100))
+const countdownPercentage = ref(countdownDiff >= countdownTotal ? 100 : Math.ceil(countdownDiff / countdownTotal * 100))
 
 const workHours = 9 * 60 * 60 * 1000
 const knockOff = ref(dayjs(`${dayjs().format('YYYY-MM-DD')} 19:00:00`))
 const knockOffDiff = getKnockOffDiff()
-const knockOffPercentage = ref(Math.ceil(knockOffDiff / workHours * 100))
+const knockOffPercentage = ref(knockOffDiff >= workHours ? 100 : Math.ceil(knockOffDiff / workHours * 100))
 
 let knockOffInterval: number
 let countdownInterval: number
@@ -49,6 +49,7 @@ onMounted(() => {
     knockOffPercentage.value = Math.ceil(newDiff / workHours * 100)
     if (newDiff >= workHours) {
       window.clearInterval(knockOffInterval)
+      knockOffPercentage.value = 100
     }
   }, 1000)
 
@@ -57,6 +58,8 @@ onMounted(() => {
     countdownPercentage.value = Math.ceil(newDiff / countdownTotal * 100)
     if (newDiff >= countdownTotal) {
       window.clearInterval(countdownInterval)
+      countdownPercentage.value = 100
+
     }
   }, 1000 * 60)
 })
