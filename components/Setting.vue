@@ -38,7 +38,7 @@ const currentSettingItem = ref('base')
       <div v-show="settingData.base.countNoonBreak" flex="~ justify-between" m="b-16px">
         <span>午休时长</span>
         <div flex="~ items-center">
-          <el-input-number v-model="settingData.base.noonBreak" :min="0" :max="10"></el-input-number>
+          <el-input-number v-model="settingData.base.noonBreak" :min="0" :max="10" :step="0.5"></el-input-number>
           <span m="l-4px">小时</span>
         </div>
       </div>

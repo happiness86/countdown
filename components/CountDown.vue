@@ -9,16 +9,18 @@ interface Holiday {
   count?: number
 }
 
+const DATE_FORMAT = 'YYYY-MM-DD'
 const setting = useSetting()
 const { start, end, countNoonBreak, noonBreak } = setting.value.base
 
 function getKnockOffDiff() {
   const { start, end, countNoonBreak, noonBreak } = setting.value.base
+  const startValue = dayjs(`${dayjs().format(DATE_FORMAT)} ${start}`).valueOf()
   const noonBreakTime = countNoonBreak ? noonBreak * 60 * 60 * 1000 : 0
-  const workHours = countNoonBreak ? (+end.split(':')[0] - +start.split(':')[0]) * 60 * 60 * 1000 : 9 * 60 * 60 * 1000
+  const s2e = dayjs(`${dayjs().format(DATE_FORMAT)} ${end}`).valueOf() - startValue
   return {
-    knockOffDiff: dayjs().valueOf() - dayjs(`${dayjs().format('YYYY-MM-DD')} ${start}`).valueOf() - noonBreakTime,
-    workHours
+    workHours: countNoonBreak ? (s2e - noonBreakTime) : s2e,
+    knockOffDiff: dayjs().valueOf() - startValue - noonBreakTime
   }
 }
 function getCountDownDiff() {
@@ -46,7 +48,7 @@ const countdownDiff = getCountDownDiff()
 const countdownTotal = dayjs(`${nextHoliday.value} ${end}`).subtract(1, 'day').valueOf() - dayjs(`${lastHoliday.value} 00:00:00`).valueOf()
 const countdownPercentage = ref(countdownDiff >= countdownTotal ? 100 : Math.ceil(countdownDiff / countdownTotal * 100))
 
-const knockOff = ref(dayjs(`${dayjs().format('YYYY-MM-DD')} ${end}`))
+const knockOff = ref(dayjs(`${dayjs().format(DATE_FORMAT)} ${end}`))
 const { knockOffDiff, workHours } = getKnockOffDiff()
 const knockOffPercentage = ref(knockOffDiff >= workHours ? 100 : Math.ceil(knockOffDiff / workHours * 100))
 
