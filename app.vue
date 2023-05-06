@@ -19,7 +19,6 @@ function checkTime() {
     localStorage.setItem(cacheKey, 'done')
   }
 }
-
 checkTime()
 
 let timer: number
