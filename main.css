@@ -9,7 +9,8 @@ html, body {
   /* scrollbars colors */
   --play-ttc-c-thumb: #eee;
   --play-ttc-c-track: white;
-  --border-color: rgba(60, 60, 67, .12)
+  --border-color: rgba(60, 60, 67, .12);
+  --el-color-primary: #FF5C90;
 }
 
 .dark {
