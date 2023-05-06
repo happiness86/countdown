@@ -19,7 +19,7 @@
   "dependencies": {
     "@element-plus/nuxt": "^1.0.4",
     "@iconify-json/twemoji": "^1.1.11",
-    "@vueuse/core": "^10.1.0",
+    "@vueuse/core": "^10.1.2",
     "@wcjiang/notify": "^2.1.0",
     "dayjs": "^1.11.7",
     "element-plus": "^2.3.4",
