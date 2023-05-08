@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@element-plus/nuxt': ^1.0.4
+  '@iconify-json/mdi': ^1.1.50
   '@iconify-json/solar': ^1.1.1
   '@iconify-json/twemoji': ^1.1.11
   '@nuxt/devtools': ^0.4.5
@@ -16,6 +17,8 @@ specifiers:
 
 dependencies:
   '@element-plus/nuxt': registry.npmjs.org/@element-plus/nuxt/1.0.4_element-plus@2.3.4
+  '@iconify-json/mdi': registry.npmjs.org/@iconify-json/mdi/1.1.50
+  '@iconify-json/solar': registry.npmjs.org/@iconify-json/solar/1.1.1
   '@iconify-json/twemoji': registry.npmjs.org/@iconify-json/twemoji/1.1.11
   '@vueuse/core': registry.npmjs.org/@vueuse/core/10.1.2
   '@wcjiang/notify': registry.npmjs.org/@wcjiang/notify/2.1.0
@@ -24,7 +27,6 @@ dependencies:
   solarlunar: registry.npmjs.org/solarlunar/2.0.7
 
 devDependencies:
-  '@iconify-json/solar': registry.npmjs.org/@iconify-json/solar/1.1.1
   '@nuxt/devtools': registry.npmjs.org/@nuxt/devtools/0.4.5_nuxt@3.4.3
   '@types/node': registry.npmjs.org/@types/node/18.16.5
   '@unocss/nuxt': registry.npmjs.org/@unocss/nuxt/0.51.12
@@ -767,13 +769,21 @@ packages:
       '@hapi/hoek': registry.npmjs.org/@hapi/hoek/9.3.0
     dev: true
 
+  registry.npmjs.org/@iconify-json/mdi/1.1.50:
+    resolution: {integrity: sha512-SgbT5w5eHCdOG74ZWPz7HlTGk6VsifIJhNi6lAsxj/5Nlqt6Cz4LlQmSa9eecU9p075Jub2aAx/o7YI+GCahRQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@iconify-json/mdi/-/mdi-1.1.50.tgz}
+    name: '@iconify-json/mdi'
+    version: 1.1.50
+    dependencies:
+      '@iconify/types': registry.npmjs.org/@iconify/types/2.0.0
+    dev: false
+
   registry.npmjs.org/@iconify-json/solar/1.1.1:
     resolution: {integrity: sha512-VN7vPHaUW5cASnm2iN986bwTMGans5zAk1cVYB6nAGDhWjqaBMS6bmYmlpAYpuLk08uMAp2YtLkC23XFQd1zhg==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@iconify-json/solar/-/solar-1.1.1.tgz}
     name: '@iconify-json/solar'
     version: 1.1.1
     dependencies:
       '@iconify/types': registry.npmjs.org/@iconify/types/2.0.0
-    dev: true
+    dev: false
 
   registry.npmjs.org/@iconify-json/twemoji/1.1.11:
     resolution: {integrity: sha512-ZA2v2AGWPC0rxiZDLqsVD+DoYB3n5Ft5q0YYAsy9QyYvoNWSdh6Vxe5d3yUP4mSpNkE4YW96RAjiZu72uXb7kQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@iconify-json/twemoji/-/twemoji-1.1.11.tgz}
