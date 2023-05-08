@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { useLocalStorage } from '@vueuse/core'
 import dayjs from 'dayjs'
 import holiday from '~/holiday.json'
 
@@ -11,7 +10,7 @@ interface Holiday {
 
 const DATE_FORMAT = 'YYYY-MM-DD'
 const setting = useSetting()
-const { start, end, countNoonBreak, noonBreak } = setting.value.base
+const { end } = setting.value.base
 
 function getKnockOffDiff() {
   const { start, end, countNoonBreak, noonBreak } = setting.value.base
