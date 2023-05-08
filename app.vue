@@ -5,16 +5,18 @@ import dayjs from 'dayjs'
 const cacheKeyPrefix = 'notify'
 const notify = useNotify()
 
+const setting = useSetting()
+const { end } = setting.value.base
+
 function checkTime() {
   const currentDate = dayjs()
-  const day = currentDate.day()
   const cacheKey = `${cacheKeyPrefix}_${currentDate.format('YYYY-MM-DD')}`
-  const hour = currentDate.hour()
-  if (hour >= 18 && hour < 19 && !localStorage.getItem(cacheKey)) {
-    const minutes = currentDate.minute()
+  const hour = currentDate.diff(`${currentDate.format('YYYY-MM-DD')} ${end}`, 'hours')
+  const minutes = currentDate.diff(`${currentDate.format('YYYY-MM-DD')} ${end}`, 'minutes')
+  if (hour === 0 && !localStorage.getItem(cacheKey)) {
     notify.notify({
       title: "倒计时",
-      body: `还有${60 - minutes - 1}分钟!`
+      body: `还有${Math.abs(minutes)}分钟!`
     })
     localStorage.setItem(cacheKey, 'done')
   }
@@ -26,6 +28,10 @@ onMounted(() => {
   timer = window.setInterval(() => {
     checkTime()
   }, 1000 * 60 * 60)
+})
+
+onBeforeUnmount(() => {
+  window.clearInterval(timer)
 })
 </script>
 <template>
