@@ -17,7 +17,7 @@ const goToGithub = () => {
     position="fixed top-0 left-0" w="80vw" class="b-b-hb z-100">
     <div class="flex items-center">
       <img width="40" height="40" src="~/assets/icons/countdown.svg"
-        class="animate-duration-2000 animate-iteration-infinite animate-rotate-out" hover="animate-none" />
+        class="animate-duration-2000 animate-iteration-infinite animate-direction-alternate animate-rotate-out" hover="animate-none" />
       <span class="font-500 text-2xl m-l-10px">Count Down</span>
     </div>
     <div class="flex items-center">
