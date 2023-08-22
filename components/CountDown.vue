@@ -100,10 +100,6 @@ onUnmounted(() => {
         <el-progress :percentage="countdownPercentage" :stroke-width="15" :duration="10" striped striped-flow
           class="w-50vw" />
       </div>
-      <img src="http://iflyad.bj.openstorage.cn/deliverysystem/material/9187f6ee7fb2123c24f16b7e76f.png">
-      <iframe width="600"    height="400" src="http://iflyad.bj.openstorage.cn/deliverysystem/material/9187f6ee7fb2123c24f16b7e76f.png">
-        <img src="http://iflyad.bj.openstorage.cn/deliverysystem/material/9187f6ee7fb2123c24f16b7e76f.png" alt="">
-      </iframe>
     </client-only>
   </div>
 </template>
