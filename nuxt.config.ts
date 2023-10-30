@@ -9,8 +9,14 @@ export default defineNuxtConfig({
     baseURL: process.env.NUXT_APP_GITHUB_PAGES === 'true' ? '/countdown/' : '/'
   },
   css: ["element-plus/theme-chalk/dark/css-vars.css"],
-
   devtools: {
-    enabled: true
+    enabled: true,
+  },
+  devServer: {
+    // https: {
+    //   key: './ca.key',
+    //   crt: './ca.crt'
+    // }
   }
+  
 });
