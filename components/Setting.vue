@@ -1,20 +1,22 @@
 <script setup lang="ts">
+import { SETTING_KEY } from '~/utils/settingStore';
+
 const settingData = useSetting()
 
 const setting = [
   {
     label: '基本设置',
-    value: 'base'
+    value: SETTING_KEY.BASE
   }
 ]
-const currentSettingItem = ref('base')
+const currentSettingItem = ref(SETTING_KEY.BASE)
 
 </script>
 <template>
   <div flex="~" w="50vw">
     <div w="10vw" text="xl">
       <div v-for="item in setting" :key="item.value" hover="bg-neutral-3" p="4px" m="r-20px" b="rd-4px" cursor="pointer"
-        :class="{ 'bg-neutral-3': currentSettingItem === item.value }">
+        :class="[currentSettingItem === item.value ? 'bg-neutral-3' : '', 'dark:bg-light-700', 'dark:text-black']">
         {{ item.label }}</div>
     </div>
     <div flex="1" text="lg">
@@ -30,7 +32,7 @@ const currentSettingItem = ref('base')
         <div flex="~ items-center">
           <span m="r-4px">是否计入午休时长</span>
           <el-tooltip class="box-item" effect="dark" content="开启后会影响下班进度条的比例" placement="right">
-           <div class="i-solar-question-circle-bold-duotone"></div>
+            <div class="i-solar-question-circle-bold-duotone"></div>
           </el-tooltip>
         </div>
         <el-switch v-model="settingData.base.countNoonBreak" active-color="#FF5C90"></el-switch>
