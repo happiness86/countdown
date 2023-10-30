@@ -24,10 +24,12 @@ function checkTime() {
 checkTime()
 
 let timer: number
-onMounted(() => {
+onMounted(async () => {
   timer = window.setInterval(() => {
     checkTime()
   }, 1000 * 60 * 60)
+  const { data } = await useFetch('/api/hello')
+  console.log(data.value?.data)
 })
 
 onBeforeUnmount(() => {
