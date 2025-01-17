@@ -36,7 +36,7 @@ switch (currentDate.day()) {
 </script>
 
 <template>
-  <div class="w-80vw p-32px shadow-xl m-l-16px flex items-center">
+  <div class="w-80vw p-32px shadow-xl m-l-16px flex items-center <md:[flex-col]">
     <div class="font-600 text-30px m-r-60px">今夕是何年</div>
     <div>
       <div class="font-500 text-22px m-b-16px">{{ dateContent.common }}</div>
