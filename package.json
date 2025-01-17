@@ -2,6 +2,7 @@
   "name": "nuxt-app",
   "private": true,
   "version": "0.0.1",
+  "type": "module",
   "scripts": {
     "build": "nuxi build",
     "dev": "nuxi dev",
